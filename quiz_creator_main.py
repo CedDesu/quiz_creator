@@ -1,9 +1,6 @@
 """
 next_question = input("")
 
-while True:
-    correct_choice = input("")
-
 save to file code
 """
 
@@ -13,13 +10,21 @@ def quiz_creator():
 
     #Asks the user for a question and 4 choices
     while True:
-
         input_question = input("Enter a question: \n")
 
         choices = {}
         for choice in ['a', 'b', 'c', 'd']:
             answer = input(f"Enter choice {choice}: ")
             choices[choice] = answer
+
+    while True:
+        correct_answer = input("Which choice is the correct answer?: \n")
+        if correct_answer in ['a', 'b', 'c', 'd']:
+            break
+        else:
+            print("Please type a valid input. (a/b/c/d)")
+
+
 
 
 

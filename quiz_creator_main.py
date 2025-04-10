@@ -17,16 +17,16 @@ def quiz_creator():
             answer = input(f"Enter choice {choice}: ")
             choices[choice] = answer
 
-    while True:
-        correct_answer = input("Which choice is the correct answer?: \n")
-        if correct_answer in ['a', 'b', 'c', 'd']:
-            break
-        else:
-            print("Please type a valid input. (a/b/c/d)")
+        while True:
+            correct_answer = input("Which choice is the correct answer?: \n")
+            if correct_answer in ['a', 'b', 'c', 'd']:
+                break
+            else:
+                print("Please type a valid input. (a/b/c/d)")
 
 
 
-    next_question = input("Do you want to input another question? (yes/no)\n")
+        next_question = input("Do you want to input another question? (yes/no)\n")
         if next_question not in ('yes','y'):
             break
 

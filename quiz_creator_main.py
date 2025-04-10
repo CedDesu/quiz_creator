@@ -26,6 +26,15 @@ def quiz_creator():
 
 
 
+    next_question = input("Do you want to input another question? (yes/no)\n")
+        if next_question not in ('yes','y'):
+            break
+
+
+
+
+
+
 
 
 

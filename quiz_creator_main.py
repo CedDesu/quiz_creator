@@ -1,7 +1,6 @@
 """
-next_question = input("")
-
-save to file code
+Quiz_Creator - First Part of a Quiz creator which asks for questions and choices.
+Second part which reads the created quizzes and makes them a functioning quiz is to be made soon.
 """
 
 def quiz_creator():
@@ -41,23 +40,12 @@ def quiz_creator():
             for key in ['a', 'b', 'c', 'd']:
                 f.write(f"  {key}) {item['choices'][key]}\n")
 
+            correct_answer = item['choices'][item['answers']]
+            f.write(f"Correct answer: {item['answers']}) {correct_answer}\n")
+            f.write("\n")
 
-
-if __name__ == "__main__":
-    quiz_creator()
-
-
-
-
-
-
-
-
-
-
-
-
-
+    print("Your quiz has been created and saved into a .txt file. (Saved in the same folder as the quiz_creator code)")
 
 if __name__ == "__main__":
     quiz_creator()
+

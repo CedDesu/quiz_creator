@@ -18,7 +18,7 @@ def quiz_creator():
             choices[choice] = answer
 
         while True:
-            correct_answer = input("Which choice is the correct answer?: \n").strip()
+            correct_answer = input("Which choice is the correct answer?: \n").strip().lower()
             if correct_answer in ['a', 'b', 'c', 'd']:
                 break
             else:

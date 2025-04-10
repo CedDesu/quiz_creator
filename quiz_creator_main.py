@@ -1,11 +1,8 @@
 """
-input_question = input("")
-
-choices = {}
-for choices in []:
-    answer = input()
-
 next_question = input("")
+
+while True:
+    correct_choice = input("")
 
 save to file code
 """
@@ -21,7 +18,7 @@ def quiz_creator():
 
         choices = {}
         for choice in ['a', 'b', 'c', 'd']:
-            answer = input(f"Enter choice {choice}")
+            answer = input(f"Enter choice {choice}: ")
             choices[choice] = answer
 
 

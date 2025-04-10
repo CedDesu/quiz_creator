@@ -5,6 +5,7 @@ save to file code
 """
 
 def quiz_creator():
+    user_quiz_data = []
 
     input("Welcome to Quiz_Creator v.1, please press any button to start.\n")
 
@@ -18,17 +19,23 @@ def quiz_creator():
             choices[choice] = answer
 
         while True:
-            correct_answer = input("Which choice is the correct answer?: \n")
+            correct_answer = input("Which choice is the correct answer?: \n").strip()
             if correct_answer in ['a', 'b', 'c', 'd']:
                 break
             else:
                 print("Please type a valid input. (a/b/c/d)")
 
+        user_quiz_data.append({
+            "question": input_question,
+            "choices": choices,
+            "answers": correct_answer
+        })
 
-
-        next_question = input("Do you want to input another question? (yes/no)\n")
+        next_question = input("Do you want to input another question? (yes/no)\n").strip().lower()
         if next_question not in ('yes','y'):
             break
+
+
 
 
 

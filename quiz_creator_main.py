@@ -35,6 +35,12 @@ def quiz_creator():
         if next_question not in ('yes','y'):
             break
 
+    with open("quiz.txt", "w") as f:
+        for idx, item in enumerate(user_quiz_data, 1):
+            f.write(f"Q{idx}: {item['question']}\n")
+            for key in ['a', 'b', 'c', 'd']:
+                f.write(f"  {key}) {item['options'][key]}\n")
+
 
 
 

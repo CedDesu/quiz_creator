@@ -78,6 +78,9 @@ def display_quiz_window(questions_data):
                 elif choice_letter == user_selected_letter:
                     radio_button.config(fg="red")
 
+    submit_button = tk.Button(question_container, text="Submit Answers", command=submit_quiz)
+    submit_button.pack(pady=10)
+
 
 
 

@@ -33,3 +33,6 @@ def display_quiz_window(questions_data):
     scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
     question_container.bind("<Configure>", lambda event: canvas.configure(scrollregion=canvas.bbox("all")))
 
+    selected_answer_vars = []
+    radio_button_groups = []
+

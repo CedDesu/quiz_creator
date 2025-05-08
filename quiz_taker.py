@@ -69,6 +69,16 @@ def display_quiz_window(questions_data):
         for (selected_var, correct_letter), (button_group, correct_choice_letter) in zip(selected_answer_vars, radio_button_groups):
             user_selected_letter = selected_var.get()
 
+            for radio_button, original_text, choice_letter in button_group:
+                display_text = original_text
+
+                if choice_letter == correct_choice_letter:
+                    display_text += " *"
+                    radio_button.config(fg="green")
+                elif choice_letter == user_selected_letter:
+                    radio_button.config(fg="red")
+
+
 
 
 

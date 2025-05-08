@@ -81,6 +81,11 @@ def display_quiz_window(questions_data):
     submit_button = tk.Button(question_container, text="Submit Answers", command=submit_quiz)
     submit_button.pack(pady=10)
 
+    window.mainloop()
+
+file_path = 'quiz.txt'
+quiz_questions = load_questions_from_file(file_path)
+display_quiz_window(quiz_questions)
 
 
 

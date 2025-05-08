@@ -29,11 +29,12 @@ def quiz_creator():
             "choices": choices,
             "answers": correct_answer
         })
-
+        #Asks user which of the four choices is the correct answer.
         next_question = input("Do you want to input another question? (yes/no)\n").strip().lower()
         if next_question not in ('yes','y'):
             break
 
+    #writes the user inputs into a .txt file
     with open("quiz.txt", "w") as f:
         for idx, item in enumerate(user_quiz_data, 1):
             f.write(f"Q{idx}: {item['question']}\n")

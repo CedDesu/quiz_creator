@@ -21,3 +21,8 @@ def load_questions_from_file(filename):
 def display_quiz_window(questions_data):
     window = tk.Tk()
     window.title("Interactive Quiz")
+
+    canvas = tk.Canvas(window)
+    scrollbar = tk.Scrollbar(window, command=canvas.yview)
+    question_container = tk.Frame(canvas)
+

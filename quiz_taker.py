@@ -50,6 +50,16 @@ def display_quiz_window(questions_data):
 
         radio_buttons_for_question = []
 
+        for choice_text in choices_list:
+            choice_letter = choice_text[0]  # 'a', 'b', etc.
+            radio_button = tk.Radiobutton(
+                question_container,
+                text=choice_text,
+                variable=selected_choice_var,
+                value=choice_letter,
+                anchor='w', justify='left'
+            )
+
 
 
 

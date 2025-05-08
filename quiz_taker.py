@@ -26,3 +26,6 @@ def display_quiz_window(questions_data):
     scrollbar = tk.Scrollbar(window, command=canvas.yview)
     question_container = tk.Frame(canvas)
 
+    canvas.create_window((0, 0), window=question_container, anchor='nw')
+    canvas.configure(yscrollcommand=scrollbar.set)
+

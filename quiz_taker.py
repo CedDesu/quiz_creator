@@ -65,6 +65,11 @@ def display_quiz_window(questions_data):
 
         radio_button_groups.append((radio_buttons_for_question, correct_choice_letter))
 
+    def submit_quiz():
+        for (selected_var, correct_letter), (button_group, correct_choice_letter) in zip(selected_answer_vars, radio_button_groups):
+            user_selected_letter = selected_var.get()
+
+
 
 
 

@@ -10,12 +10,14 @@ def load_questions_from_file(filename):
         lines = [line.strip() for line in file if line.strip()]
 
     questions_data = []
-      for index in range(0, len(lines), 6):
-        if lines[index].startswith("Q") and lines[index +
-    5].startswith("Correct answer:"):
+    for index in range(0, len(lines), 6):
+        if lines[index].startswith("Q") and lines[index + 5].startswith("Correct answer:"):
             question_text = lines[index]
             choices = lines[index + 1 : index + 5]
             correct_answer_line = lines[index + 5]
-            questions_data.append((question_text, choices,
-    correct_answer_line))
-        return questions_data
+            questions_data.append((question_text, choices, correct_answer_line))
+    return questions_data
+
+def display_quiz_window(questions_data):
+    window = tk.Tk()
+    window.title("Interactive Quiz")

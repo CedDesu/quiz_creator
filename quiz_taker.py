@@ -29,3 +29,7 @@ def display_quiz_window(questions_data):
     canvas.create_window((0, 0), window=question_container, anchor='nw')
     canvas.configure(yscrollcommand=scrollbar.set)
 
+    canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+    scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+    question_container.bind("<Configure>", lambda event: canvas.configure(scrollregion=canvas.bbox("all")))
+

@@ -60,6 +60,12 @@ def display_quiz_window(questions_data):
                 anchor='w', justify='left'
             )
 
+            radio_button.pack(fill='x', padx=20, anchor='w')
+            radio_buttons_for_question.append((radio_button, choice_text, choice_letter))
+
+        radio_button_groups.append((radio_buttons_for_question, correct_choice_letter))
+
+
 
 
 

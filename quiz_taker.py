@@ -40,3 +40,14 @@ def display_quiz_window(questions_data):
         correct_full_text = correct_answer_line.split(":", 1)[1].strip()
         correct_choice_letter = correct_full_text[0]
 
+        selected_choice_var = tk.StringVar(value="")
+        selected_answer_vars.append((selected_choice_var, correct_choice_letter))
+
+        tk.Label(
+            question_container, text=question_text, font=("Arial", 12, "bold"),
+            anchor='w', justify='left'
+        ).pack(fill='x', padx=10, pady=(10, 0))
+
+
+
+

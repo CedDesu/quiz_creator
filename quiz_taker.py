@@ -46,7 +46,9 @@ def display_quiz_window(questions_data):
         tk.Label(
             question_container, text=question_text, font=("Arial", 12, "bold"),
             anchor='w', justify='left'
-        ).pack(fill='x', padx=10, pady=(10, 0)
+        ).pack(fill='x', padx=10, pady=(10, 0))
+
+        radio_buttons_for_question = []
 
 
 

@@ -36,3 +36,7 @@ def display_quiz_window(questions_data):
     selected_answer_vars = []
     radio_button_groups = []
 
+    for question_index, (question_text, choices_list, correct_answer_line) in enumerate(questions_data):
+        correct_full_text = correct_answer_line.split(":", 1)[1].strip()
+        correct_choice_letter = correct_full_text[0]
+
